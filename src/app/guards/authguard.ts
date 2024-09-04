@@ -17,4 +17,3 @@ export const AuthGuard: CanActivateFn = () => {
   }
   return true;
 }
-
