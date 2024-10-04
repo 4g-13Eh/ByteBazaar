@@ -1,0 +1,35 @@
+.cartItem {
+  @apply flex items-center gap-4 mb-4;
+}
+
+.cartItemContent {
+  @apply flex flex-col w-full;
+}
+
+.cartItemImg {
+  @apply w-48 h-48 object-cover ml-1.5;
+}
+
+.cartItemInfo {
+  @apply grow flex flex-col items-end mr-12 relative;
+}
+
+.removeBtn {
+  @apply p-2 border-none cursor-pointer rounded-lg -mr-5;
+}
+
+.largeHr {
+  @apply mb-3 border-2 border-[#147b73];
+}
+
+.smallHr {
+  @apply mb-2 border-[0.5px] border-[#cacaca];
+}
+
+.quantityContainer{
+  @apply flex items-center gap-2;
+}
+
+.quantityInput{
+  @apply p-1 border border-gray-300 rounded w-16 text-center;
+}

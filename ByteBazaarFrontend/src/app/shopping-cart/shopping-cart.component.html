@@ -1,0 +1,53 @@
+<app-header>
+  <app-searchfield />
+</app-header>
+
+<main class="m-10">
+  <div class="min-w-max">
+    <h2 class="text-5xl font-extrabold">Warenkorb</h2>
+    <hr class="largeHr" />
+  </div>
+  @if (cartItems.length > 0){
+    @for (cartItem of cartItems; track cartItem.cartItem.itemId){
+      <div class="cartItem">
+        <img [src]="cartItem.cartItem.picture" [alt]="cartItem.cartItem.name" class="cartItemImg" />
+        <div class="cartItemContent">
+          <h2 class="itemName">{{cartItem.cartItem.name}}</h2>
+          <div class="cartItemInfo">
+            @if ((cartItem.cartItem.price * cartItem.quantity) % 2 == 0){
+              <p>Preis: CHF {{cartItem.cartItem.price * cartItem.quantity }}.-</p>
+            } @else {
+              <p>Preis: CHF {{cartItem.cartItem.price * cartItem.quantity }}</p>
+            }
+            <div class="quantityContainer">
+              <label for="quantity-{{cartItem.cartItem.itemId}}">Anzahl:</label>
+              <input type="number"
+                     id="quantity-{{cartItem.cartItem.itemId}}"
+                     [(ngModel)]="cartItem.quantity"
+                     (ngModelChange)="updateQuantity(cartItem.cartItem.itemId, $event, cartItem)"
+                     min="1"
+                     step="1"
+                     class="quantityInput"
+              />
+            </div>
+            <img
+              src="../../assets/images/bin.svg"
+              alt="deleteBtn"
+              class="removeBtn"
+              (keydown)="removeItem(cartItem.cartItem.itemId)"
+              (click)="removeItem(cartItem.cartItem.itemId)" />
+          </div>
+        </div>
+      </div>
+      <hr class="smallHr" />
+    }
+    <div class="grid grid-cols-1">
+      <div class="flex flex-col max-w-max space-y-2.5">
+        <button (click)="clearCart()" class="genericBtn">Warenkorb leeren</button>
+        <button (click)="routeToCheckout()" class="genericBtn">Zur Kasse</button>
+      </div>
+    </div>
+  } @else {
+    <p>Ihr Warenkorb ist leer.</p>
+  }
+</main>
