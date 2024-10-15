@@ -28,15 +28,16 @@ services:
       - mariadb
   
   mariadb:
-    image: mariadb:latest
+    image: mariadb:11.5.2
     environment:
       - MARIADB_ROOT_PASSWORD=${MARIADB_PASSWORD}
       - MARIADB_DATABASE=${DB_NAME}
     container_name: bytebazaar_db
     ports:
-      - "3307:3307"
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
+      - ./ByteBazaarBackend/schema.sql:/docker-entrypoint-initdb.d/1.sql
     networks:
       - bytebazaar_network
 
