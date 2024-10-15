@@ -17,6 +17,8 @@ services:
     build:
       context: ./ByteBazaarBackend
       dockerfile: Dockerfile
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
     container_name: bytebazaarbackend
     ports:
       - "8080:8080"
