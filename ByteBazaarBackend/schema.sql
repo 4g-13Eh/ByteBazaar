@@ -81,7 +81,7 @@ LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` VALUES
 (1,'Audio'),
-(2,'B├╝ro'),
+(2,'Büro'),
 (3,'Drohnen'),
 (4,'Foto'),
 (5,'Video'),

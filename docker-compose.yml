@@ -1,3 +1,5 @@
+name: bytebazaar
+
 services:
   frontend:
     #image: dedf1sh/bytebazaarfrontend:latest
