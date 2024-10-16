@@ -24,8 +24,7 @@ You need to define the following environment variables to configure the backend 
     ```.env
     SECRET_KEY=JWS-Key
     ```
-[.env (root directory)](example.env)
-You'll also need to adjust the values inside of the .env file in the root direcotry. This file is used by Docker Compose to inject values into the containers.
+You'll also need to adjust the values inside of the [.env](example.env)file in the root direcotry. This file is used by Docker Compose to inject values into the containers.
 ```.env
 MARIADB_USER=USERNAME
 MARIADB_PASSWORD=PASSWORD
