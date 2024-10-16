@@ -12,7 +12,7 @@ Before you can run the application, make sure you have installed [Docker Desktop
 
 ## Environment Variables
 You need to define the following environment variables to configure the backend and database:
-1. [.env (resources)](ByteBazaarBackend\src\main\resources\example.env):
+1. [.env (resources)](ByteBazaarBackend/src/main/resources/example.env):
     ```.env
     MARIADB_USER=USERNAME
     MARIADB_PASSWORD=PASSWORD
@@ -20,11 +20,11 @@ You need to define the following environment variables to configure the backend 
     MARIADB_PORT=3306 # <-- MariaDB uses port 3306 inside of the container
     DB_NAME=bytebazaarDB
     ```
-2. [.env (backend directory)](ByteBazaarBackend\example.env):
+2. [.env (backend directory)](ByteBazaarBackend/example.env):
     ```.env
     SECRET_KEY=JWS-Key
     ```
-You'll also need to adjust the values inside of the [.env](example.env)file in the root direcotry. This file is used by Docker Compose to inject values into the containers.
+You'll also need to adjust the values inside of the [.env](example.env) file in the root direcotry. This file is used by Docker Compose to inject values into the containers.
 ```.env
 MARIADB_USER=USERNAME
 MARIADB_PASSWORD=PASSWORD
@@ -58,7 +58,7 @@ SECRET_KEY=JWT_SECRET
 >  If you have changed the ports in the docker-compose.yml file, update the URLs accordingly.
 
 ## Database Initialization
-The MariaDB container will automatically initialize the database using the [schema.sql](ByteBazaarBackend\schema.sql) file. This schema is loaded on the first run when the database is empty.
+The MariaDB container will automatically initialize the database using the [schema.sql](ByteBazaarBackend/schema.sql) file. This schema is loaded on the first run when the database is empty.
 To modify the database schema, edit the schema.sql file and rebuild the containers by running:
 ```bash
 docker-compose down
