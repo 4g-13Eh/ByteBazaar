@@ -24,7 +24,7 @@ You need to define the following environment variables to configure the backend 
     ```.env
     SECRET_KEY=JWS-Key
     ```
-You'll also need to adjust the values inside of the [.env](example.env) file in the root direcotry. This file is used by Docker Compose to inject values into the containers.
+You'll also need to adjust the values inside the [.env](example.env) file in the root directory. This file is used by Docker Compose to inject values into the containers.
 ```.env
 MARIADB_USER=USERNAME
 MARIADB_PASSWORD=PASSWORD
@@ -47,7 +47,7 @@ SECRET_KEY=JWT_SECRET
     docker-compose up --build
     ```
     This will build the frontend and backend containers, start MariaDB, and run the application. The containers for each service will be started in the following order:
-    1. MariaDB(Database)
+    1. MariaDB (Database)
     2. Backend (Spring Boot)
     3. Frontend (Angular)
 3. Access the Application
