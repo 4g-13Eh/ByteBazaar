@@ -54,8 +54,8 @@ SECRET_KEY=JWT_SECRET
     Once the containers are running, you can access the application at:
     - **Frontend**: http://localhost:4200
     - **Backend**: http://localhost:8080
-    > [!Note]
-    > If you have changed the ports in the docker-compose.yml file, update the URLs accordingly.
+> [!Note]
+>  If you have changed the ports in the docker-compose.yml file, update the URLs accordingly.
 
 ## Database Initialization
 The MariaDB container will automatically initialize the database using the [schema.sql](ByteBazaarBackend\schema.sql) file. This schema is loaded on the first run when the database is empty.
