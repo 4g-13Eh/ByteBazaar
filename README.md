@@ -1,6 +1,6 @@
 # ByteBazaar
 
-ByteBazaar is a multi-container application that includes a frontend, backend, and database service. The application is orchestrated using Docker Compose, which handles the building and running of the containers for each service.
+ByteBazaar is a multi-container application that includes a frontend, backend and database service. The application is orchestrated using Docker Compose, which handles the building and running of the containers for each service.
 
 ## Services
 - **Frontend**: Built with Angular, the frontend service is served using Nginx.
