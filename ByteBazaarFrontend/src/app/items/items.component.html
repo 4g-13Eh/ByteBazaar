@@ -15,11 +15,7 @@
           class="item">
           <img id="itemPic" [src]="item.picture" alt="{{item.name}}" width="576px" height="375px" />
           <p id="itemPrice" class="itemPrice">
-            @if (item.price % 2 === 0) {
-              Preis: CHF {{item.price }}.-
-            } @else {
-              Preis: CHF {{item.price }}
-            }
+            Preis: {{ item.price | currency }}
           </p>
           <p id="itemName" class="itemName">{{ item.name }}</p>
           <p id="itemCats">{{ getCategoryNames(item.categories) }}</p>

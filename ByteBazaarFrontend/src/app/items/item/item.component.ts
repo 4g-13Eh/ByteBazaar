@@ -11,6 +11,7 @@ import {UserModel} from "../../models/user.model";
 import {UserService} from "../../services/user.service";
 import {HeaderComponent} from "../../ui/header/header.component";
 import {SearchfieldComponent} from "../../ui/searchfield/searchfield.component";
+import {CurrencyPipe} from "../../pipes/currency.pipe";
 
 @Component({
   selector: 'app-item',
@@ -20,7 +21,8 @@ import {SearchfieldComponent} from "../../ui/searchfield/searchfield.component";
     AccordionItemComponent,
     NgOptimizedImage,
     HeaderComponent,
-    SearchfieldComponent
+    SearchfieldComponent,
+    CurrencyPipe
   ],
   templateUrl: './item.component.html',
   styleUrl: './item.component.css'

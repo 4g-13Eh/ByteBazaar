@@ -10,6 +10,7 @@ import {MatTooltip} from "@angular/material/tooltip";
 import {MatDialog} from "@angular/material/dialog";
 import {HeaderComponent} from "../ui/header/header.component";
 import {SearchfieldComponent} from "../ui/searchfield/searchfield.component";
+import {CurrencyPipe} from "../pipes/currency.pipe";
 
 
 @Component({
@@ -22,6 +23,7 @@ import {SearchfieldComponent} from "../ui/searchfield/searchfield.component";
     MatTooltip,
     HeaderComponent,
     SearchfieldComponent,
+    CurrencyPipe,
   ],
   templateUrl: './items.component.html',
   styleUrl: './items.component.css'

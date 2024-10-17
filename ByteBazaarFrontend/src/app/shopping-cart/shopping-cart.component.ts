@@ -8,6 +8,7 @@ import {UserModel} from "../models/user.model";
 import {Subscription} from "rxjs";
 import {HeaderComponent} from "../ui/header/header.component";
 import {SearchfieldComponent} from "../ui/searchfield/searchfield.component";
+import {CurrencyPipe} from "../pipes/currency.pipe";
 
 @Component({
   selector: 'app-shopping-cart',
@@ -15,7 +16,8 @@ import {SearchfieldComponent} from "../ui/searchfield/searchfield.component";
   imports: [
     FormsModule,
     HeaderComponent,
-    SearchfieldComponent
+    SearchfieldComponent,
+    CurrencyPipe
   ],
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.css'

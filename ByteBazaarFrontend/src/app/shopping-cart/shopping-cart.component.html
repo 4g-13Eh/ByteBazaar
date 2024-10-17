@@ -14,11 +14,9 @@
         <div class="cartItemContent">
           <h2 class="itemName">{{cartItem.cartItem.name}}</h2>
           <div class="cartItemInfo">
-            @if ((cartItem.cartItem.price * cartItem.quantity) % 2 == 0){
-              <p>Preis: CHF {{cartItem.cartItem.price * cartItem.quantity }}.-</p>
-            } @else {
-              <p>Preis: CHF {{cartItem.cartItem.price * cartItem.quantity }}</p>
-            }
+            <p>
+              Preis: {{ cartItem.cartItem.price * cartItem.quantity | currency }}
+            </p>
             <div class="quantityContainer">
               <label for="quantity-{{cartItem.cartItem.itemId}}">Anzahl:</label>
               <input type="number"
